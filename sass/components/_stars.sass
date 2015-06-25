@@ -1,0 +1,99 @@
+@function multiple-box-shadow ($n) 
+    $value: '#{random(2000)}px #{random(2000)}px #c00'
+    @for $i from 2 through $n
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #fff'
+
+    @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(600)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+$shadows-large:    multiple-box-shadow(10)
+
+
+#stars
+    width: 1px
+    height: 1px
+    display: block
+    background: transparent
+    +bradius(50%)
+    +boxshadow($shadows-small)
+    +animation(animStar 80s linear infinite)
+    
+
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 1px
+        height: 1px
+        background: transparent
+        +bradius(50%)
+        +boxshadow($shadows-small)
+    
+#stars2
+    width: 2px
+    height: 2px
+    display: block
+    background: transparent
+    +bradius(50%)
+    +boxshadow($shadows-medium)
+    +animation(animStar 100s linear infinite)
+    
+
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 2px
+        height: 2px
+        background: transparent
+        +bradius(50%)
+        +boxshadow($shadows-medium)
+    
+#stars3
+    width: 3px
+    height: 3px
+    display: block
+    background: transparent
+    +bradius(50%)
+    +boxshadow($shadows-big)
+    +animation(animStar 150s linear infinite)
+    
+
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 3px
+        height: 3px
+        background: transparent
+        +bradius(50%)
+        +boxshadow($shadows-big)
+
+#sstars
+    width: 5px
+    height: 5px
+    display: block
+    background: transparent
+    +bradius(50%)
+    +boxshadow($shadows-large)
+    +animation(animStar 240s linear infinite)
+
+    &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 5px
+        height: 5px
+        +bradius(50%)
+        background: transparent
+        +boxshadow($shadows-large)
+    
+    
+
++keyframes(animStar)
+    from	
+        +transform(translateY(0px))
+    to		
+        +transform(translateY(-2000px))

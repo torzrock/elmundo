@@ -1,0 +1,543 @@
+
+
+section
+    position: relative
+    display: block
+    margin: 0
+    min-height: 100vh
+    height: auto
+    width: 100vw
+    overflow: hidden
+    background-color: $nb1
+    background-size: 100% auto$imp
+    +borderbox
+    padding: 0 5vw
+    +transitionspeed(0.5s)
+    +desktopS
+        padding: 0 20px
+    +fortablet
+        padding: 0 20px
+    +ipadorient(portrait)
+        background-attachment: fixed
+        background-position: center top$imp
+        background-size: auto 100%$imp
+    +formobileO(landscape)
+        min-height: 500px$imp 
+    +formobile
+        min-height: 500px$imp
+        height: auto
+        overflow: hidden
+        background-size: cover$imp
+        background-position: center top $imp
+        background-repeat: no-repeat$imp
+    
+    
+    h1
+        font-family: $raleway
+        font-weight: 900
+        text-align: center
+        color: #fff
+        margin-top: 50px
+        text-transform: uppercase
+        font-size: 40px
+        +formobile
+            font-size: 30px
+            padding-bottom: 10px
+            margin-top: 30px
+    h2
+        font-family: $opensanR
+        color: #fff
+        text-align: center
+        display: block
+        overflow: visible
+        padding: 0 20px
+        margin: 0 0 50px
+        font-weight: 100
+        font-size: 18px
+        +formobile
+            font-size: 14px
+            margin: 0 0 40px
+    
+    
+        
+    &#start
+        padding: 0$imp
+        +radialgradient(ellipse at center bottom , #1B2735 0%, #090A0F 100%)
+        overflow: hidden
+        
+        .greetings
+            width: 100%   
+            text-align: center     
+            position: absolute
+            left: 0
+            top: 50%
+            margin-top: -160px
+            opacity: 0
+            
+            h2
+                font-family: $raleway
+                font-weight: 900
+                font-size: 30px
+                
+        
+        .centerer
+            +centerer
+            opacity: 0
+            +formobile
+                text-align: center
+            
+            h1
+                margin: 0
+                font-family: $opensanR
+                font-size: 20px
+                font-weight: 400
+                letter-spacing: 28px
+                text-align: right
+                padding: 10px 0
+                overflow: visible
+                +desktopS
+                    letter-spacing: 20px
+                +fortablet
+                    letter-spacing: 12px
+                +formobile
+                    font-size: 17px
+                    margin: 0 0
+                    line-height: 25px
+                    letter-spacing: 0
+                    text-align: center
+            h2
+                letter-spacing: 9px
+                padding: 0 20px
+                text-align: center
+                font-weight: 100
+                text-align: right
+                font-size: 12px
+                +formobile
+                    font-size: 10px
+                    letter-spacing: 0
+                    text-align: center$imp
+            
+            span
+                color: #fff
+                letter-spacing: 5px
+                font-size: 12px
+                text-align: right
+                display: block
+                padding: 0 25px
+                +formobile
+                    font-size: 12px
+                    letter-spacing: 1px
+                    text-align: center$imp
+            
+        #enjoytext
+            text-align: center
+            h1
+                +formobile
+                    letter-spacing: 1px
+            
+            blockquote
+                color: #fff
+                font-family: $opensanR
+                +formobile
+                    font-size: 13px
+                    line-height: 25px
+            
+        .scrollD
+            position: absolute
+            bottom: 100px
+            left: 0
+            width: 100%
+            text-align: center
+            color: #fff
+            font-size: 12px
+            font-family: $opensanR
+            font-weight: 100
+            display: none
+            text-decoration: none
+            
+            i
+                font-size: 40px
+        
+        
+        
+        
+            
+    
+    &.intro
+        background: #F3F3F3
+        text-align: center
+        height: auto
+        min-height: 0
+        
+        
+        
+        
+        
+    &.skill
+        +radialgradient(ellipse at center top , #1B2735 0%, #090A0F 100%)
+        min-height: 0
+        +borderbox
+        padding-bottom: 150px 
+        
+        h1
+            color: #fff
+            margin-top: 80px
+        h2
+            color: #fff
+            
+        
+        .skillist
+            margin: 0 auto
+            padding: 0 0
+            display: block
+            width: 100%
+            overflow: hidden
+            list-style: none
+
+            
+            li
+                display: block
+                float: left
+                width: 33%
+                height: auto
+                overflow: hidden
+                text-align: center
+                color: #fff
+                padding: 50px 20px 0
+                min-height: 300px
+                position: relative
+                +borderbox
+                +fortablet
+                    min-height: 400px
+                    padding-bottom: 100px
+                +formobile
+                    width: 100%
+                    float: none
+                    margin-bottom: 20px
+                
+                &:hover
+                    span
+                        font-size: 50px
+                        +animation(spinY 3s linear infinite)
+                        +transformstyle(preserve-3d)
+                        +transitionspeed(0.5s)
+                 
+                
+                
+                h2
+                    margin-top: 20px
+                    margin-bottom: 10px
+                
+                span
+                    font-size: 40px
+                    font-weight: 100
+                    position: absolute
+                    right: 0
+                    left: 0
+                    top: 0
+                    
+                        
+                p
+                    overflow: visible
+                    font-family: $opensanR
+                    font-size: 14px
+                    line-height: 20px
+                
+                .btn
+                    position: absolute
+                    bottom: 10px
+                    left: 0
+                    right: 0
+                    +formobile
+                        position: relative
+                        bottom: auto
+                        left: auto
+                        right: auto
+                    
+            
+        .hobbies
+            height: auto
+            overflow: hidden
+            +borderbox
+            padding: 0 0 50px
+            max-height: 0
+            +transitionspeed(0.5s)
+                
+            &.open
+                max-height: 500px
+                +formobile
+                    max-height: 1000px
+            
+            ul
+                margin: 0
+                padding: 0
+                list-style: none
+                text-align: center
+                
+                li
+                    display: block
+                    float: left
+                    overflow: hidden
+                    width: 50%
+                    +borderbox
+                    color: #fff
+                    +borderbox
+                    padding: 0 20px
+                    text-align: left$imp
+                    +formobile
+                        float: none
+                        width: 100%
+                    
+                    h1
+                        text-align: left
+                        font-size: 30px
+                        +fortablet
+                            font-size: 25px
+                        +formobile
+                            text-align: center
+                    p
+                        text-align: left
+                        font-family: $opensanR
+                        
+                        display: block
+                        height: 30px
+                        line-height: 30px
+                        position: relative
+                        padding: 0
+                        margin-bottom: 10px
+                        overflow: hidden
+                        +borderbox
+                        padding: 0 10px
+                        +formobile
+                            text-align: left
+                            margin-bottom: 15px
+                        
+                        $list: htcss jsq wpress ps6 happ
+                        @each $class in $list
+                            //RANDOM
+                            $red: random(256)-1
+                            $green: random(256)-1
+                            $blue: random(256)-1
+                            $alpha: random(100)/100
+                            &.#{$class}
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    height: 30px
+                                    background-color: rgba($red, $green, $blue, $alpha) 
+                                    left: 0
+                                    top: 0
+                                    @if $class == htcss
+                                        width: 95%
+                                    @else if $class == jsq
+                                        width: 90%
+                                    @else if $class == wpress
+                                        width: 88%
+                                    @else if $class == ps6
+                                        width: 88%
+                                    @else if $class == happ
+                                        width: 80%
+                        
+                        span
+                            margin-right: 20px
+                        a
+                            float: right
+                            height: 30px
+                            line-height: 30px
+                            display: block
+                            color: #fff
+                            text-decoration: none
+                            font-size: 12px
+                            padding: 0 10px
+                            margin: 0
+                            +bradius(5px)
+                            +radialgradient(ellipse at center bottom , #517fa4 10%, #243949 90%)
+                            &:hover
+                                +radialgradient(ellipse at center bottom , #243949 10%, #517fa4 90%)
+
+        
+                    
+        
+    &.work
+        
+        color: #333
+        background: #f3f3f3
+        padding-bottom: 100px
+        min-height: 0
+        height: auto
+        +formobile
+            background-position: center top$imp
+                
+        h1
+            color: #333
+            margin-top: 0
+        h2
+            color: #333
+            
+        .workex
+            margin: 0
+            padding: 0
+            list-style: none
+            overflow: hidden
+            width: 100%
+            
+            li
+                float: left
+                +borderbox
+                border-top: 0px #fff solid
+                width: 20%
+                margin: 5px 0
+                position: relative
+                padding: 20px
+                text-align: center
+                font-family: $opensanR
+                +boxshadow(#bbb 0 1px 0 inset)
+                +fortablet
+                    padding: 20px 5px
+                +formobile
+                    width: 100%
+                    float: none
+                    border-top: 0
+                    border-left: 0px #777 solid
+                    +boxshadow(#bbb 1px 0 0 inset)
+                    margin: 0 5px
+                    padding: 0 20px 50px 20px
+                
+                
+                &:before
+                    content: ""
+                    width: 10px
+                    height: 10px
+                    position: absolute
+                    left: 50%
+                    top: -5px
+                    background: #ccc
+                    +bradius(50%)
+                    +formobile
+                        top: 0px
+                        left: -4px
+                        
+                
+                small
+                    font-size: 12px
+                
+                img
+                    display: block
+                    max-width: 80%
+                    margin: 20px auto
+                
+                h2
+                    padding: 10px 0
+                    font-weight: 400
+                    margin: 0
+                
+                em
+                    margin-bottom: 10px
+                    display: block
+                p
+                    font-size: 12px
+                    text-align: justify
+                    font-family: $opensanR
+        .brands
+            height: auto
+            overflow: hidden
+            +borderbox  
+            max-height: 0
+            +transitionspeed(0.5s)
+            
+
+                
+            &.open
+                max-height: 500px
+                padding: 0 0 50px
+                +formobile
+                    max-height: 500px
+            
+            img
+                max-width: 1280px
+                display: block
+                margin: 0 auto
+                width: 90%
+                height: auto
+                +formobile
+                    width: 100%
+        
+    &.contact
+        background: #f3f3f3 url('images/splash1a.jpg') center center no-repeat
+        background-attachment: fixed
+        text-align: center
+        min-height: 200px
+        background-size: 100% auto
+        +formobile
+            background-size: 100% 100%
+        
+        h1
+            color: #333
+            margin-top: 100px
+        h2
+            color: #333
+        
+        
+        a
+            display: inline-block
+            width: 150px
+            height: 150px
+            margin: 0 5px 100px
+            &.ios
+                display: none
+            +fortablet
+                &.mac
+                    display: none
+                &.ios
+                    display: inline-block
+            +formobile
+                width: 70px
+                height: 70px
+                &.mac
+                    display: none
+                &.ios
+                    display: inline-block
+            
+            
+            
+            &.imessage
+                background: url('images/messages-icon.png') center center
+                background-size: 100%
+                
+            &.call
+                background: url('images/phoneicon.png') center center
+                background-size: 100%
+                
+            &.email
+                background: url('images/email.png') center center
+                background-size: 100%
+
+        
+    
+            
+        
+        
+        
+        
+                
+//Animation 
+.stopanim
+    +stopanim
+    
++keyframes(spin)
+    100%
+        +rotate(-360deg)
+
++keyframes(spin2)
+    100%
+        +rotate(360deg)
+
++keyframes(spinY)
+    100%
+        +rotateY(-360deg)
+        
+//Transform   
+@for $i from 1 through 100 
+    .char#{$i} 
+        +transform(rotate(($i*9)+deg))       
+        

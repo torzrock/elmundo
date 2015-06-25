@@ -1,0 +1,57 @@
+$grid-width: 40px
+$gutter-width: 10px
+
+@function grid-width($n) 
+    @return $n * $grid-width + ($n - 1) * $gutter-width
+    
+
+//#sidebar
+    width: grid-width(5)
+    
+
+$rmaxwidth: 100vw
+
+@function responsivecolums($n) 
+    @return $rmaxwidth / $n
+
+//.resdiv
+    width: responsivecolums(6)
+    +formobile
+        width: responsivecolums(1)
+
+//REM CALCULATE
+@function calculateRem($size) 
+    $remSize: $size / 16px
+    @return $remSize * 1rem
+    
+
+    
+=font-size($size) 
+    font-size: $size
+    font-size: calculateRem($size)
+    
+//PREFIXES
+@function prefix($property, $prefixes: (webkit moz o ms))
+    $vendor-prefixed-properties: transform background-clip background-size
+    $result: ()
+    @each $prefix in $prefixes 
+        @if index($vendor-prefixed-properties, $property) 
+            $property: -#{$prefix}-#{$property}
+       
+        $result: append($result, $property)
+    
+    @return $result
+
+ 
+@function trans-prefix($transition, $prefix: moz) 
+    $prefixed: ()
+    @each $trans in $transition 
+        $prop-name: nth($trans, 1)
+        $vendor-prop-name: prefix($prop-name, $prefix)
+        $prop-vals: nth($trans, 2)
+        $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma)
+
+
+    @return $prefixed
+
+

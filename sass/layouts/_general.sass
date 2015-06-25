@@ -1,0 +1,527 @@
+html
+    position: relative
+body
+    background-color: #000 
+    +radialgradient(ellipse at center bottom , #F3D500 0%, #DF9900 100%)
+    font-family: $opensanL, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-weight: 300
+    overflow-x: hidden
+    position: relative
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    -moz-osx-font-smoothing: greyscale
+    -webkit-font-smoothing: antialiased
+    font-smooth: always
+    text-rendering: optimizeLegibility$imp
+    
+    
+a,img 
+    outline-width: 0
+    border: 0
+a
+    cursor: pointer$imp
+
+strong
+    font-weight: 700
+h1
+    font-size: 50px
+    font-weight: 100
+    display: block
+    margin: 0
+    padding: 20px 0
+    overflow: hidden
+h2
+    display: block
+    margin: 0
+    padding: 20px 0
+    overflow: hidden
+
+
+.animate
+    opacity: 0
+
+
+    
+//LAYOUT
+
+.fblikebox
+    position: absolute
+    left: 20px
+    top: 10px
+    z-index: 99
+    +fortablet
+        display: none
+    +formobile
+        display: none
+
+.wrapper
+    width: 100vw
+    height: auto
+    overflow: hidden
+    
+header
+    ul
+        margin: 20px 0
+        padding: 10px 0
+        list-style: none
+        overflow: hidden
+        display: block
+        text-align: center
+        height: auto
+        background: #DF9900
+        +formobile
+            background: #DF9900
+        
+        li
+            display: inline-block
+            width: 200px
+            overflow: visible
+            +formobile
+                width: 30%
+            
+            a
+                text-decoration: none
+                color: #333
+                text-transform: lowercase
+                font-size: 20px
+                +transitionspeed(0.5s)
+                +formobile
+                    font-size: 12px
+                &:hover
+                    color: #fff
+                
+                
+            
+    
+.logo
+    display: block
+    width: 250px
+    height: 100px
+    background: url('images/logo.png')
+    margin: 0 auto
+    +formobile
+        margin: 0 auto
+    
+
+
+
+.banner
+    width: 100%
+    max-width: 100%
+    margin: 10px auto 0
+    background: #111
+    height: 500px
+    overflow: hidden
+    position: relative
+    +formobile
+        display: none
+    
+    video 
+        height: 100%
+        width: 100%
+        transform: scale(2.3,1.35)
+        -webkit-transform: scale(2.3,1.35)
+        -moz-transform: scale(2.3,1.35)
+        +fortablet
+            transform: scale(2.3,1.5)
+            -webkit-transform: scale(2.3,1.5)
+            -moz-transform: scale(2.3,1.5)
+        +formobile
+            display: none  
+        
+    .play
+        position: absolute
+        z-index: 10
+        color: #fff
+        width: 50px
+        height: 50px
+        line-height: 50px
+        left: 50%
+        top: 50%
+        margin-left: -25px
+        margin-top: -25px
+        font-size: 50px
+        display: none
+        +firefox
+            display: none$imp
+    
+    .optionbox
+        position: absolute
+        z-index: 9
+        width: 100%
+        height: 100%
+        
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+            position: relative
+            display: block
+            overflow: hidden
+            
+            li
+                +borderbox
+                float: left
+                width: 25%
+                height: 500px
+                margin: 0
+                text-align: center
+                position: relative
+
+                
+                div
+                    +borderbox
+                    width: 100%
+                    height: 500px
+                    padding: 0 0 50px
+                    background: rgba(0,0,0,0.3)
+                    +opacity(0)
+                    +transitionspeed(0.5s)
+                    color: #fff
+                    text-align: left
+                    
+                    
+                    &.opened
+                        +opacity(1)
+                    
+                    img
+                        width: 100%
+                        height: auto
+                        max-width: 100%
+                    h2
+                        font-weight: 700
+                        font-size: 25px
+                    h2 , p
+                        padding: 10px 20px
+                        margin: 0
+                    
+                    a
+                        padding: 0 20px
+                        color: #DF9900
+                        text-decoration: none
+                    
+                        
+                > a
+                    display: block
+                    height: 50px
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    background: rgba(0,0,0,0.5)
+                    color: #fff
+                    text-align: center
+                    text-decoration: none
+                    width: 100%
+                    line-height: 50px
+                    +boxshadow(#222 -1px 0 0 )
+                    +transitionspeed(0.5s)
+                    
+                    &:hover, &.active 
+                        background: #DF9900
+        
+
+                        
+//ABOUT
+.about
+    width: 100%
+    min-width: 300px
+    height: auto
+    +borderbox
+    overflow: hidden
+    position: relative
+    background: transparent
+    padding: 50px 20px 20px 
+    
+    section
+        width: 1366px
+        max-width: 90%
+        margin: 0 auto
+        overflow: hidden
+        position: relative
+        
+        
+        h1
+            font-size: 40px
+            font-weight: 700
+            margin: 0
+            padding: 0
+            letter-spacing: -1px
+            +formobile
+                font-size: 35px
+        h2
+            font-size: 20px
+            margin: 0 0 30px
+            padding: 0
+            letter-spacing: 1px
+            
+        img
+            float: left
+            margin: 0 30px
+            
+            +fortablet
+                margin: 0 20px 0 0
+                max-width: 120px
+                width: 120px
+            
+            +formobile
+                max-width: 70px
+                margin: 0 10px 0 0
+
+//TOURS
+.tours
+    width: 100%
+    min-width: 300px
+    height: auto
+    +borderbox
+    overflow: hidden
+    position: relative
+    background: #fff
+    padding: 50px 20px
+    text-align: center
+    
+    h2
+        font-size: 40px
+        font-weight: 700
+        margin: 0
+        padding: 0
+        letter-spacing: -1px
+        text-align: center
+        
+    ul
+        margin: 20px 0
+        padding: 0
+        list-style: none
+        display: block
+        overflow: hidden
+        font-family: Arial, $opensanR
+        letter-spacing: 0
+        
+        li
+            display: block
+            float: left
+            width: 25%
+            +borderbox
+            height: auto
+            padding: 0 20px
+            +desktopS 
+                width: 50%
+            +fortablet
+                width: 50%
+            +formobile
+                float: none
+                width: 100%
+                margin-bottom: 30px
+                padding: 0 10px
+            
+            h2
+                font-size: 25px
+                height: 35px
+                overflow: hidden
+                display: block
+                font-family: $opensanR 
+            
+            ol
+                margin: 0
+                padding: 0
+                display: block
+                overflow: hidden
+                margin-bottom: 20px
+                
+                li
+                    display: block
+                    width: 100%
+                    height: auto
+                    text-align: left
+                    padding: 5px 0
+                    text-transform: uppercase
+                    font-size: 12px
+                    overflow: hidden
+                    margin: 5px 0 
+                    color: #555
+                    
+                    a
+                        display: block
+                        overflow: hidden
+                        
+                        i
+                            float: right
+                            color: #c00
+                            +transitionspeed(0.5s)
+                        &.active
+                            font-weight: 700
+                            i
+                                +rotate(225deg)
+                    div
+                        +borderbox
+                        padding: 10px
+                        border: 1px #333 dashed
+                        margin: 10px 0
+                        display: none
+                        
+                        p
+                            display: block
+                            margin: 10px 0 30px
+                        
+                        span
+                            display: block
+                            padding: 10px
+                            text-align: center
+                            background: #F3D500
+                            font-weight: 700
+                            margin: 2px 0
+                            +formobile
+                                font-size: 10px
+                        
+                        em
+                            display: block
+                            padding: 10px 0
+                            font-size: 10px
+                            text-align: center
+                            color: #c00
+                            font-family: Arial, $opensanR
+                        
+                        img
+                            max-width: 100%
+                            
+
+//CONTACT US
+.contactus
+    width: 100%
+    min-width: 300px
+    height: auto
+    +borderbox
+    overflow: hidden
+    position: relative
+    padding: 50px 0
+    text-align: center
+    
+    h2
+        font-size: 40px
+        font-weight: 700
+        margin: 0
+        padding: 0
+        letter-spacing: -1px
+        text-align: center
+    
+    h3
+        padding: 20px
+    
+    #map-canvas
+        width: 90%
+        height: 350px
+        margin: 20px auto
+        background: #fff
+        
+        h2
+            font-size: 18px
+            padding: 10px 0 5px
+        h3
+            padding: 5px 0 10px
+    
+    ul
+        display: block
+        margin: 0 auto
+        padding: 0
+        overflow: hidden
+        width: 1280px
+        max-width: 90%
+        height: auto
+        
+        li
+            float: left
+            width: 25%
+            +borderbox
+            padding: 20px
+            color: #333
+            +fortablet
+                width: 50%
+
+            +formobile
+                width: 100%
+                float: none
+            
+            h2
+                font-size: 20px
+            p
+                display: block
+                margin: 5px 0
+                height: auto
+                line-height: 30px
+                
+                a
+                    text-decoration: none
+                    color: #333
+                
+                a[href*=tel] 
+                    +formobile
+                        display: block
+                        width: 80%
+                        overflow: hidden
+                        position: relative
+                        height: 40px
+                        margin: 0 auto
+                        text-indent: -1000px
+                        
+                        &::before
+                            content: "CALL US  \f095"
+                            font-family: FontAwesome , $opensanR
+                            position: absolute
+                            width: 100%
+                            height: 40px
+                            line-height: 40px
+                            left: 0
+                            top: 0
+                            +radialgradient(ellipse at center bottom , #F3D500 0%, #DF9900 100%)
+                            text-indent: 0
+                            color: #333
+                            border: 1px #DF9900 solid
+                            +borderbox
+                            +bradius(10px)
+                            font-weight: 700
+                    
+        
+
+//BUTTONS
+.down
+    display: block
+    color: #fff
+    font-size: 50px
+    text-align: center
+    margin: 30px 0
+    
+    &.dark
+        color: #333
+
+.downloadBtn
+    display: block
+    width: 200px
+    text-align: center
+    padding: 15px 20px
+    margin: 15px auto 30px
+    +bradius(10px)
+    +radialgradient(ellipse at center bottom , #F3D500 0%, #DF9900 100%)
+    height: auto
+    overflow: hidden
+    text-decoration: none
+    color: #fff
+    
+
+.embed-container  
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    overflow: hidden
+    max-width: 100%
+    
+    iframe, object, embed 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.clear
+    clear: both
+    margin: 10px 0
+    display: block
+    padding: 10px 0
+        
